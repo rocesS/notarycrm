@@ -1,2 +1,4 @@
-package com.example.notarycrm;public class NaturalPerson {
+package com.example.notarycrm;
+
+public class NaturalPerson {
 }
