@@ -1,6 +1,7 @@
 package com.example.notarycrm;
 
-public class LegalPerson {
+public class LegalPerson implements PersonInterface {
+
 
 
 }
