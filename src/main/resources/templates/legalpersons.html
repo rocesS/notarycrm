@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Legal Persons</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}"/>
+</head>
+<body>
+<div class="container-fluid text-center">
+    <div><h2>Manage Legal Persons</h2></div>
+    <div class="m-2">
+        <a class="h3" th:href="@{/legalpersons/new}">Add New User</a>
+    </div>
+        <table class="table table-bordered">
+            <thead class="table-dark">
+                <th>ID</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>KRS</th>
+                <th>Phone Number</th>
+                <th>E-mail</th>
+            </thead>
+            <tbody>
+                <th:block th:each="legalperson : ${listLegalPersons}">
+                   <tr>
+                       <td>[[${legalperson.id}]]</td>
+                       <td>[[${legalperson.name}]]</td>
+                       <td>[[${legalperson.address}]]</td>
+                       <td>[[${legalperson.krsNumber}]]</td>
+                       <td>[[${legalperson.phoneNumber}]]</td>
+                       <td>[[${legalperson.email}]]</td>
+                       <td>
+                           <a class="h4 mr-3" th:href="@{'/legalpersons/edit/' + ${legalperson.id}}">Edit</a>
+                           <a class="h4" th:href="@{'/legalpersons/delete/' + ${legalperson.id}}">Delete</a>
+                       </td>
+                   </tr>
+                </th:block>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>

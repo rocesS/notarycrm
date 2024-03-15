@@ -12,7 +12,6 @@ public class LegalPerson {
     @Column (nullable = false, length = 45, name = "name")
     private String name;
 
-
     @Column (nullable = false, length = 45, name = "email")
     private String email;
 

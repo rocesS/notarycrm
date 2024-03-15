@@ -22,10 +22,10 @@ public class LegalPersonRepositoryTest {
     @Test
     public void testAdd() {
         LegalPerson legalPerson = new LegalPerson();
-        legalPerson.setEmail("prezesio@microsoft.pl");
-        legalPerson.setAddress("Ul. Chrobrego 23, Swidnica 58-101");
-        legalPerson.setName("SwidnickiGang");
-        legalPerson.setKrsNumber(345234234);
+        legalPerson.setEmail("email.napisz@domnie.pl");
+        legalPerson.setAddress("Ul. Kocia 1, Wojnów 51-045");
+        legalPerson.setName("WKS Sp z o.o.");
+        legalPerson.setKrsNumber(523623564);
         legalPerson.setPhoneNumber("+48748523452");
 
         LegalPerson savedLegalPerson = repo.save(legalPerson);
