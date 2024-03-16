@@ -28,6 +28,7 @@ public class LegalPersonRepositoryTest {
         legalPerson.setKrsNumber(523623564);
         legalPerson.setPhoneNumber("+48748523452");
 
+
         LegalPerson savedLegalPerson = repo.save(legalPerson);
 
         Assertions.assertThat(savedLegalPerson).isNotNull();

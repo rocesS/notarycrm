@@ -18,13 +18,16 @@ public class NaturalPerson {
     private String lastName;
 
     @Column (nullable = false, length = 45, unique = true)
-    private int pesel;
+    private Integer pesel;
 
     @Column (nullable = false, length = 45)
     private String dateOfBirth;
 
     @Column (nullable = false, length = 45)
     private String cityOfBirth;
+
+    @Column (nullable = false, length = 45)
+    private String address;
 
     @Column (nullable = false, length = 45)
     private String nameOfMother;
@@ -66,11 +69,11 @@ public class NaturalPerson {
         this.lastName = lastName;
     }
 
-    public int getPesel() {
+    public Integer getPesel() {
         return pesel;
     }
 
-    public void setPesel(int pesel) {
+    public void setPesel(Integer pesel) {
         this.pesel = pesel;
     }
 
@@ -88,6 +91,14 @@ public class NaturalPerson {
 
     public void setCityOfBirth(String cityOfBirth) {
         this.cityOfBirth = cityOfBirth;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public String getNameOfMother() {
@@ -129,4 +140,5 @@ public class NaturalPerson {
     public void setNationality(String nationality) {
         this.nationality = nationality;
     }
+
 }
