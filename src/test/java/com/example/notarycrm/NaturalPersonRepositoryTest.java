@@ -1,7 +1,9 @@
 package com.example.notarycrm;
 
+import com.example.notarycrm.LegalPerson.LegalPerson;
 import com.example.notarycrm.NaturalPerson.NaturalPerson;
 import com.example.notarycrm.NaturalPerson.NaturalPersonRepository;
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
@@ -25,8 +27,18 @@ public class NaturalPersonRepositoryTest {
         naturalPerson.setNationality("polskie");
         naturalPerson.setPesel(80121689756);
 
-
     }
+
+    @Test
+    public void testListAll() {
+        Iterable<NaturalPerson> naturalPerson = repo.findAll();
+        Assertions.assertThat(naturalPerson).hasSizeGreaterThan(0);
+
+        for (NaturalPerson naturalPerson1 : naturalPerson) {
+            System.out.println(naturalPerson);
+        }
+    }
+
 
 
 
