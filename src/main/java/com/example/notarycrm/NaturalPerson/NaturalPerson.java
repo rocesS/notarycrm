@@ -18,7 +18,7 @@ public class NaturalPerson {
     private String lastName;
 
     @Column (nullable = false, length = 45, unique = true)
-    private Integer pesel;
+    private String pesel;
 
     @Column (nullable = false, length = 45)
     private String dateOfBirth;
@@ -37,9 +37,6 @@ public class NaturalPerson {
 
     @Column (nullable = false, length = 45, unique = true)
     private String iDCardNumber;
-
-    @Column (nullable = false, length = 45)
-    private String validityDateOfTheIDCard;
 
     @Column (nullable = false, length = 45)
     private String nationality;
@@ -69,11 +66,11 @@ public class NaturalPerson {
         this.lastName = lastName;
     }
 
-    public Integer getPesel() {
+    public String getPesel() {
         return pesel;
     }
 
-    public void setPesel(Integer pesel) {
+    public void setPesel(String pesel) {
         this.pesel = pesel;
     }
 
@@ -125,14 +122,6 @@ public class NaturalPerson {
         this.iDCardNumber = iDCardNumber;
     }
 
-    public String getValidityDateOfTheIDCard() {
-        return validityDateOfTheIDCard;
-    }
-
-    public void setValidityDateOfTheIDCard(String validityDateOfTheIDCard) {
-        this.validityDateOfTheIDCard = validityDateOfTheIDCard;
-    }
-
     public String getNationality() {
         return nationality;
     }
@@ -141,4 +130,20 @@ public class NaturalPerson {
         this.nationality = nationality;
     }
 
+    @Override
+    public String toString() {
+        return "NaturalPerson{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", pesel='" + pesel + '\'' +
+                ", dateOfBirth='" + dateOfBirth + '\'' +
+                ", cityOfBirth='" + cityOfBirth + '\'' +
+                ", address='" + address + '\'' +
+                ", nameOfMother='" + nameOfMother + '\'' +
+                ", nameOfFather='" + nameOfFather + '\'' +
+                ", iDCardNumber='" + iDCardNumber + '\'' +
+                ", nationality='" + nationality + '\'' +
+                '}';
+    }
 }

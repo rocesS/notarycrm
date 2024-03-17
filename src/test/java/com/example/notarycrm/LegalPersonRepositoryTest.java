@@ -75,4 +75,5 @@ public class LegalPersonRepositoryTest {
         Assertions.assertThat(optionalLegalPerson).isNotPresent();
     }
 
+
 }
