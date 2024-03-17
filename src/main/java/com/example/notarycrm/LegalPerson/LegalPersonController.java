@@ -9,13 +9,14 @@ import java.util.List;
 
 @Controller
 public class LegalPersonController {
-    @Autowired private LegalPersonService service;
+
+    @Autowired
+    private LegalPersonService service;
 
     @GetMapping("/legalpersons")
     public String showLegalPersonList(Model model) {
         List<LegalPerson> listLegalPersons = service.listAll();
         model.addAttribute("listLegalPersons",listLegalPersons);
-
         return "legalPersons";
     }
 
