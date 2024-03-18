@@ -4,7 +4,7 @@
 
 
 
-If you are notary office owner im this application you can ease manage two types of your client :
+If you are notary office owner this application let you ease manage two types of your client :
 1. Legal Person
 2. Natural Person
 
