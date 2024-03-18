@@ -1,6 +1,24 @@
 # The Notary CRM
 ## _Easy way to manage customer in notary office_
 
+
+
+
+If you are notary office owner im this application you can ease manage two types of your client :
+1. Legal Person
+2. Natural Person
+
+
+
+## Features
+
+- In application you can Add, Edit, List and Delete user in database
+- Application is able to veryfi KRS Number in external data base(Krajowy Rejestr Sądowniczy) before adding to database - in progress
+- Natural Person with polish nationality can be validate by PESEL number - in progress
+- PowerUser can give privileges to single office co-worker - in progress
+- Creating ready document/file with all marked user
+
+
 [![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
@@ -11,17 +29,6 @@ Th
 - See HTML in the right
 - ✨Magic ✨
 
-## Features
-
-- In application You c
-- Drag and drop images (requires your Dropbox account be linked)
-- Import and save files from GitHub, Dropbox, Google Drive and One Drive
-- Drag and drop markdown and HTML files into Dillinger
-- Export documents as Markdown, HTML and PDF
-
-If you are notary office owner im this application you can ease manage two types of your client :
-1. Legal Person
-2. Natural Person
 
 > The overriding design goal for Markdown's
 > formatting syntax is to make it as readable
