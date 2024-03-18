@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Manage Natural Persons</title>
+  <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}"/>
+</head>
+<body>
+<div class="container-fluid text-center">
+  <div><h2>Manage Natural Persons</h2></div>
+  <div class="m-2">
+    <a class="h3" th:href="@{/naturalperson/new}">Add New User</a>
+  </div>
+  <table class="table table-bordered">
+    <thead class="table-dark">
+    <th>ID</th>
+    <th>First Name</th>
+    <th>Last Name </th>
+    <th>PESEL</th>
+    <th>Date of Birth</th>
+    <th>Place of Birth</th>
+    <th>Address</th>
+    <th>Mother's Name</th>
+    <th>Father's Name</th>
+    <th>ID Card Number</th>
+    <th>Nationality</th>
+    </thead>
+    <tbody>
+    <th:block th:each="naturalperson : ${naturalPersonsList}">
+      <tr>
+        <td>[[${naturalperson.id}]]</td>
+        <td>[[${naturalperson.firstName}]]</td>
+        <td>[[${naturalperson.lastName}]]</td>
+        <td>[[${naturalperson.pesel}]]</td>
+        <td>[[${naturalperson.dateOfBirth}]]</td>
+        <td>[[${naturalperson.cityOfBirth}]]</td>
+        <td>[[${naturalperson.address}]]</td>
+        <td>[[${naturalperson.nameOfMother}]]</td>
+        <td>[[${naturalperson.nameOfFather}]]</td>
+        <td>[[${naturalperson.iDCardNumber}]]</td>
+        <td>[[${naturalperson.nationality}]]</td>
+        <td>
+          <a class="h4 mr-3" th:href="@{'/naturalpersons/edit/' + ${naturalperson.id}}">Edit</a>
+          <a class="h4" th:href="@{'/naturalpersons/delete/' + ${naturalperson.id}}">Delete</a>
+        </td>
+      </tr>
+    </th:block>
+    </tbody>
+  </table>
+</div>
+</div>
+</body>
+</html>

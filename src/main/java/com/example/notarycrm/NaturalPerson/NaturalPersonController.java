@@ -16,10 +16,8 @@ public class NaturalPersonController {
     @GetMapping("/naturalpersons")
     public String showNaturalPersonList(Model model) {
         List<NaturalPerson> naturalPersonsList = service.naturalPersonList();
-        model.addAttribute("naturalPersonslist",naturalPersonsList);
-        return "legalPersons";
+        model.addAttribute("naturalPersonsList",naturalPersonsList);
+        return "naturalpersons";
     }
-
-
 
 }
