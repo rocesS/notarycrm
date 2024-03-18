@@ -4,7 +4,7 @@
 ## _Easy way to manage customer in notary office_
 
 
-If you are notary office owner this application let you ease manage two types of your client :
+If you are notary office owner this application let you easy manage two the most popular types of your clients in this industry:
 1. Legal Person
 2. Natural Person
 
