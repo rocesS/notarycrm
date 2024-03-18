@@ -21,7 +21,7 @@ If you are notary office owner this application let you ease manage two types of
 - Creating ready document/file with all marked user
 
 
-[![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
+[![N|Solid]([https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid](https://github.com/rocesS/notarycrm/blob/master/Pliki%20do%20readme/Spring%20Console.png))
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
