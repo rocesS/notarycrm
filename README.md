@@ -33,7 +33,7 @@ _Used technologies:_
 
 ## Tests
 
-Aplication is tested with TDD methodology. Phat to tests: src/test/java/com/example/notarycrm
+Tests have been written in TDD methodology. Phat to tests: src/test/java/com/example/notarycrm
 
 ##
 
