@@ -1,3 +1,5 @@
+Pliki do readme/Spring Console.png
+
 # The Notary CRM
 ## _Easy way to manage customer in notary office_
 
