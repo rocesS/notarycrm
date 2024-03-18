@@ -1,9 +1,7 @@
-![Tekst alternatywny](Pliki do readme/Spring Console.png)
 
-# The Notary CRM
+![Spring Console](https://github.com/rocesS/notarycrm/assets/73910003/4c376f94-87f3-4ab0-b7c4-34b720360190)
+
 ## _Easy way to manage customer in notary office_
-
-
 
 
 If you are notary office owner this application let you ease manage two types of your client :
@@ -14,188 +12,49 @@ If you are notary office owner this application let you ease manage two types of
 
 ## Features
 
-- In application you can Add, Edit, List and Delete user in database
-- Application is able to veryfi KRS Number in external data base(Krajowy Rejestr Sądowniczy) before adding to database - in progress
-- Natural Person with polish nationality can be validate by PESEL number - in progress
-- PowerUser can give privileges to single office co-worker - in progress
-- Creating ready document/file with all marked user
-
-
-[![N|Solid]([https://cldup.com/dTxpPi9lDf.thumb.png)]
-
-
-[![Build Status]([https://travis-ci.org/joemccann/dillinger.svg?branch=master](https://github.com/rocesS/notarycrm/blob/master/Pliki%20do%20readme/Spring%20Console.png))](https://travis-ci.org/joemccann/dillinger)
-
-Th
-
-- Type some Markdown on the left
-- See HTML in the right
-- ✨Magic ✨
-
-
-> The overriding design goal for Markdown's
-> formatting syntax is to make it as readable
-> as possible. The idea is that a
-> Markdown-formatted document should be
-> publishable as-is, as plain text, without
-> looking like it's been marked up with tags
-> or formatting instructions.
-
-This text you see here is *actually- written in Markdown! To get a feel
-for Markdown's syntax, type some text into the left window and
-watch the results in the right.
+- In application you can ✨Add✨ ✨Edit✨ ✨List✨ and ✨Delete✨ user in your database 
+- Application is able to veryfi KRS Number for leagl persons group customers in external data base(Krajowy Rejestr Sądowniczy) before adding to database - _in progress_
+- Natural Person's  with polish nationality PESEL number can be validate by application - _in progress_
+- PowerUser can give privileges to single office co-worker - _in progress_
+- Creating ready document/file with all marked details about user - _in progress_
 
 ## Tech
 
-Dillinger uses a number of open source projects to work properly:
+_Used technologies:_
+- Java
+- Spring Boot DevTools
+- Spring Web
+- Thymeleaf
+- Spring Data JPA
+- SQL
+- Hibernate
+- HTML5
 
-- [AngularJS] - HTML enhanced for web apps!
-- [Ace Editor] - awesome web-based text editor
-- [markdown-it] - Markdown parser done right. Fast and easy to extend.
-- [Twitter Bootstrap] - great UI boilerplate for modern web apps
-- [node.js] - evented I/O for the backend
-- [Express] - fast node.js network app framework [@tjholowaychuk]
-- [Gulp] - the streaming build system
-- [Breakdance](https://breakdance.github.io/breakdance/) - HTML
-to Markdown converter
-- [jQuery] - duh
 
-And of course Dillinger itself is open source with a [public repository][dill]
- on GitHub.
+## Tests
 
-## Installation
+Aplication is tested with TDD methodology. Phat to tests: src/test/java/com/example/notarycrm
 
-Dillinger requires [Node.js](https://nodejs.org/) v10+ to run.
+##
 
-Install the dependencies and devDependencies and start the server.
-
-```sh
-cd dillinger
-npm i
-node app
+```
+Aplication is made in MVC design pattern 
 ```
 
-For production environments...
+![MVC](https://github.com/rocesS/notarycrm/assets/73910003/40769821-26b0-479f-9b7b-8fb6eff5fd03)
 
-```sh
-npm install --production
-NODE_ENV=production node app
-```
+## Overview
 
-## Plugins
+User view:
 
-Dillinger is currently extended with the following plugins.
-Instructions on how to use them in your own application are linked below.
+![first view](https://github.com/rocesS/notarycrm/assets/73910003/9c6321a9-31f6-4f41-a6f8-11c76801ca39)
 
-| Plugin | README |
-| ------ | ------ |
-| Dropbox | [plugins/dropbox/README.md][PlDb] |
-| GitHub | [plugins/github/README.md][PlGh] |
-| Google Drive | [plugins/googledrive/README.md][PlGd] |
-| OneDrive | [plugins/onedrive/README.md][PlOd] |
-| Medium | [plugins/medium/README.md][PlMe] |
-| Google Analytics | [plugins/googleanalytics/README.md][PlGa] |
+Legal Person administrator view:
 
-## Development
+![Legal Persons](https://github.com/rocesS/notarycrm/assets/73910003/7f317fd9-617e-4e72-8609-9b9279249a86)
 
-Want to contribute? Great!
 
-Dillinger uses Gulp + Webpack for fast developing.
-Make a change in your file and instantaneously see your updates!
+Natural Person administrator view:
 
-Open your favorite Terminal and run these commands.
+![Natural Persons](https://github.com/rocesS/notarycrm/assets/73910003/857acec4-4ad6-4e4f-bead-7d3fac7ac061)
 
-First Tab:
-
-```sh
-node app
-```
-
-Second Tab:
-
-```sh
-gulp watch
-```
-
-(optional) Third:
-
-```sh
-karma test
-```
-
-#### Building for source
-
-For production release:
-
-```sh
-gulp build --prod
-```
-
-Generating pre-built zip archives for distribution:
-
-```sh
-gulp build dist --prod
-```
-
-## Docker
-
-Dillinger is very easy to install and deploy in a Docker container.
-
-By default, the Docker will expose port 8080, so change this within the
-Dockerfile if necessary. When ready, simply use the Dockerfile to
-build the image.
-
-```sh
-cd dillinger
-docker build -t <youruser>/dillinger:${package.json.version} .
-```
-
-This will create the dillinger image and pull in the necessary dependencies.
-Be sure to swap out `${package.json.version}` with the actual
-version of Dillinger.
-
-Once done, run the Docker image and map the port to whatever you wish on
-your host. In this example, we simply map port 8000 of the host to
-port 8080 of the Docker (or whatever port was exposed in the Dockerfile):
-
-```sh
-docker run -d -p 8000:8080 --restart=always --cap-add=SYS_ADMIN --name=dillinger <youruser>/dillinger:${package.json.version}
-```
-
-> Note: `--capt-add=SYS-ADMIN` is required for PDF rendering.
-
-Verify the deployment by navigating to your server address in
-your preferred browser.
-
-```sh
-127.0.0.1:8000
-```
-
-## License
-
-MIT
-
-**Free Software, Hell Yeah!**
-
-[//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
-
-   [dill]: <https://github.com/joemccann/dillinger>
-   [git-repo-url]: <https://github.com/joemccann/dillinger.git>
-   [john gruber]: <http://daringfireball.net>
-   [df1]: <http://daringfireball.net/projects/markdown/>
-   [markdown-it]: <https://github.com/markdown-it/markdown-it>
-   [Ace Editor]: <http://ace.ajax.org>
-   [node.js]: <http://nodejs.org>
-   [Twitter Bootstrap]: <http://twitter.github.com/bootstrap/>
-   [jQuery]: <http://jquery.com>
-   [@tjholowaychuk]: <http://twitter.com/tjholowaychuk>
-   [express]: <http://expressjs.com>
-   [AngularJS]: <http://angularjs.org>
-   [Gulp]: <http://gulpjs.com>
-
-   [PlDb]: <https://github.com/joemccann/dillinger/tree/master/plugins/dropbox/README.md>
-   [PlGh]: <https://github.com/joemccann/dillinger/tree/master/plugins/github/README.md>
-   [PlGd]: <https://github.com/joemccann/dillinger/tree/master/plugins/googledrive/README.md>
-   [PlOd]: <https://github.com/joemccann/dillinger/tree/master/plugins/onedrive/README.md>
-   [PlMe]: <https://github.com/joemccann/dillinger/tree/master/plugins/medium/README.md>
-   [PlGa]: <https://github.com/RahulHP/dillinger/blob/master/plugins/googleanalytics/README.md>
