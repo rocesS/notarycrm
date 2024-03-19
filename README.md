@@ -24,6 +24,7 @@ _Used technologies:_
 - Java 17
 - Spring Boot
 - Spring Web
+- Bootstrap (frontend)
 - Thymeleaf
 - Spring Data JPA
 - SQL
