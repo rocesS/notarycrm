@@ -21,15 +21,15 @@ If you are notary office owner this application let you easy manage two the most
 ## Tech
 
 _Used technologies:_
-- Java
-- Spring Boot DevTools
+- Java 17
+- Spring Boot
 - Spring Web
 - Thymeleaf
 - Spring Data JPA
 - SQL
 - Hibernate
+- Maven
 - HTML5
-
 
 ## Tests
 
