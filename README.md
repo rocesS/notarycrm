@@ -58,3 +58,7 @@ Natural Person administrator view:
 
 ![Natural Persons](https://github.com/rocesS/notarycrm/assets/73910003/857acec4-4ad6-4e4f-bead-7d3fac7ac061)
 
+Administrator view where we can add new notary office co-worker able to mange database:
+
+![Zrzut ekranu 2024-03-19 o 01 10 04](https://github.com/rocesS/notarycrm/assets/73910003/b52923f1-5f2b-4d4d-bba3-b7aa62c72cac)
+
