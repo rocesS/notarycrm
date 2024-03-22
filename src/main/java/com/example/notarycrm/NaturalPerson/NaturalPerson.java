@@ -11,31 +11,31 @@ public class NaturalPerson {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column (nullable = false, length = 45)
+    @Column (nullable = false, length = 45, name = "first_name")
     private String firstName;
 
-    @Column (nullable = false, length = 45)
+    @Column (nullable = false, length = 45, name = "last_name")
     private String lastName;
 
     @Column (nullable = false, length = 45, unique = true)
     private String pesel;
 
-    @Column (nullable = false, length = 45)
+    @Column (nullable = false, length = 45, name = "date_of_birth")
     private String dateOfBirth;
 
-    @Column (nullable = false, length = 45)
+    @Column (nullable = false, length = 45, name = "place_of_birth")
     private String cityOfBirth;
 
     @Column (nullable = false, length = 45)
     private String address;
 
-    @Column (nullable = false, length = 45)
+    @Column (nullable = false, length = 45, name = "mothers_name")
     private String nameOfMother;
 
-    @Column (nullable = false, length = 45)
+    @Column (nullable = false, length = 45, name = "fathers_name")
     private String nameOfFather;
 
-    @Column (nullable = false, length = 45, unique = true)
+    @Column (nullable = false, length = 45, unique = true, name = "id_card_number")
     private String iDCardNumber;
 
     @Column (nullable = false, length = 45)
