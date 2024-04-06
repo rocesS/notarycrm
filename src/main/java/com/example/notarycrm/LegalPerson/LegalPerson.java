@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 @Entity
 @Table(name = "legal_persons")
 public class LegalPerson {
+
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -23,6 +24,9 @@ public class LegalPerson {
 
     @Column (unique = true, nullable = false, length = 45, name = "krs")
     private int krsNumber;
+
+    private boolean enabled;
+
 
     public Integer getId() {
         return id;
@@ -83,4 +87,12 @@ public class LegalPerson {
                 ", krsNumber=" + getKrsNumber() +
                 '}';
     }
+
+    public boolean isEnabled() {
+        return enabled;
+    }
+
+
+
+
 }
