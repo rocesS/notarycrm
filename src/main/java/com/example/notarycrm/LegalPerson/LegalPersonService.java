@@ -19,5 +19,7 @@ public class LegalPersonService {
         repo.save(legalPerson);
     }
 
+    public LegalPerson get(Integer id) throws LegalPersonNot
+
 
 }
