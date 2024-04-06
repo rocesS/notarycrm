@@ -11,7 +11,13 @@ public class LegalPersonService {
     @Autowired
     private LegalPersonRepository repo;
 
-    public List<LegalPerson> listAll() {
+    public List<LegalPerson> legalPersonList() {
         return  (List<LegalPerson>) repo.findAll();
     }
+
+    public void save(LegalPerson legalPerson) {
+        repo.save(legalPerson);
+    }
+
+
 }
