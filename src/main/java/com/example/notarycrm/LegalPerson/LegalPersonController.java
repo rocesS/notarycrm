@@ -50,4 +50,15 @@ public class LegalPersonController {
         }
     }
 
+    @GetMapping("/legalpersons/delete/{id}")
+    public String deleteLegalPerson(@PathVariable("id") Integer id, RedirectAttributes ra) {
+        try {
+            service.delete(id);
+            ra.addFlashAttribute("message", "The Legal Person " + id + " has been deleted");
+        } catch (LegalPersonNotFoundException e) {
+            ra.addFlashAttribute("message", e.getMessage());
+        }
+        return "redirect:/legalpersons";
+    }
+
 }
