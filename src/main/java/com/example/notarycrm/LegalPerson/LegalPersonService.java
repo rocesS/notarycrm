@@ -29,5 +29,11 @@ public class LegalPersonService {
     }
 
 
-
+    public void delete(Integer id) throws LegalPersonNotFoundException {
+        Long count = repo.countById(id);
+        if (count == null || count == 0) {
+            throw new LegalPersonNotFoundException("Could not find any Legal Person with ID " + id);
+        }
+        repo.deleteById(id);
+    }
 }
