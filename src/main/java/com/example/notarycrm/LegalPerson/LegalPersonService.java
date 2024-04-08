@@ -25,7 +25,7 @@ public class LegalPersonService {
         if (result.isPresent()){
             return result.get();
         }
-        throw new LegalPersonNotFoundException("Could not find any legal person with ID");
+        throw new LegalPersonNotFoundException("Could not find any Legal Person with ID");
     }
 
 
