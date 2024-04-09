@@ -41,6 +41,7 @@ public class NaturalPerson {
     @Column (nullable = false, length = 45)
     private String nationality;
 
+    private boolean enabled;
 
     public Integer getId() {
         return id;
@@ -133,17 +134,25 @@ public class NaturalPerson {
     @Override
     public String toString() {
         return "NaturalPerson{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", pesel='" + pesel + '\'' +
-                ", dateOfBirth='" + dateOfBirth + '\'' +
-                ", cityOfBirth='" + cityOfBirth + '\'' +
-                ", address='" + address + '\'' +
-                ", nameOfMother='" + nameOfMother + '\'' +
-                ", nameOfFather='" + nameOfFather + '\'' +
-                ", iDCardNumber='" + iDCardNumber + '\'' +
-                ", nationality='" + nationality + '\'' +
+                "id=" + getId() +
+                ", firstName='" + getFirstName() + '\'' +
+                ", lastName='" + getLastName() + '\'' +
+                ", pesel='" + getPesel() + '\'' +
+                ", dateOfBirth='" + getDateOfBirth() + '\'' +
+                ", cityOfBirth='" + getCityOfBirth() + '\'' +
+                ", address='" + getAddress() + '\'' +
+                ", nameOfMother='" + getNameOfMother() + '\'' +
+                ", nameOfFather='" + getNameOfFather() + '\'' +
+                ", iDCardNumber='" + getiDCardNumber() + '\'' +
+                ", nationality='" + getNationality() + '\'' +
                 '}';
+    }
+
+    public boolean isEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled(boolean enabled) {
+        this.enabled = enabled;
     }
 }

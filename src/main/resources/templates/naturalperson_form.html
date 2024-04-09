@@ -10,44 +10,80 @@
 <div class="container-fluid">
     <div class="text-center"><h2>[[${pageTitle}]]</h2></div>
 
-    <form th:action="@{/naturalpersons/save}" method="post" th:object="${naturalperson}"
+    <form th:action="@{/naturalpersons/save}" method="post" th:object="${naturalPerson}"
           style="max-width: 500px; margin: 0 auto;">
         <input type="hidden" th:field="*{id}">
         <div class="border border-secondary rounded p-3">
-            <div class="form-group row">
-                <label class="col-sm-4 col-form-label">Login:</label>
-                <div class="col-sm-8">
-                    <input type="text" th:field="*{login}" class="form-control" required minlength="2" maxlength="45" />
-                </div>
-            </div>
-
-            <div class="form-group row">
-                <label class="col-sm-4 col-form-label">Password:</label>
-                <div class="col-sm-8">
-                    <input type="password" th:field="*{password}" class="form-control" required minlength="5" maxlength="45" />
-                </div>
-            </div>
-
-            <div class="form-group row">
-                <label class="col-sm-4 col-form-label">E-mail:</label>
-                <div class="col-sm-8">
-                    <input type="email" th:field="*{email}" class="form-control" required minlength="8" maxlength="45" />
-                </div>
-            </div>
 
             <div class="form-group row">
                 <label class="col-sm-4 col-form-label">First Name:</label>
                 <div class="col-sm-8">
-                    <input type="text" th:field="*{firstName}" class="form-control" required minlength="2" maxlength="45"/>
+                    <input type="text" th:field="*{firstName}" class="form-control" required minlength="2" maxlength="45" />
                 </div>
             </div>
 
             <div class="form-group row">
                 <label class="col-sm-4 col-form-label">Last Name:</label>
                 <div class="col-sm-8">
-                    <input type="text" th:field="*{lastName}" class="form-control" required minlength="2" maxlength="45"/>
+                    <input type="text" th:field="*{lastName}" class="form-control" required minlength="2" maxlength="45" />
                 </div>
             </div>
+
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label">PESEL:</label>
+                <div class="col-sm-8">
+                    <input type="text" th:field="*{pesel}" class="form-control" required minlength="8" maxlength="45" />
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label">Date of Birth:</label>
+                <div class="col-sm-8">
+                    <input type="text" th:field="*{dateOfBirth}" class="form-control" required minlength="2" maxlength="45"/>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label">Place of Birth:</label>
+                <div class="col-sm-8">
+                    <input type="text" th:field="*{cityOfBirth}" class="form-control" required minlength="2" maxlength="45"/>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label">Address:</label>
+                <div class="col-sm-8">
+                    <input type="text" th:field="*{address}" class="form-control" required minlength="2" maxlength="45"/>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label">Mother's name:</label>
+                <div class="col-sm-8">
+                    <input type="text" th:field="*{nameOfMother}" class="form-control" required minlength="2" maxlength="45"/>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label">Father's name:</label>
+                <div class="col-sm-8">
+                    <input type="text" th:field="*{nameOfFather}" class="form-control" required minlength="2" maxlength="45"/>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label">ID Card Number:</label>
+                <div class="col-sm-8">
+                    <input type="text" th:field="*{iDCardNumber}" class="form-control" required minlength="2" maxlength="45"/>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label">Nationality:</label>
+                <div class="col-sm-8">
+                    <input type="text" th:field="*{nationality}" class="form-control" required minlength="2" maxlength="45"/>
+                </div>
+            </div>
+
+
             <div class="form-group row">
                 <label class="col-sm-4 col-form-label">Enabled:</label>
                 <div class="col-sm-8">
@@ -64,7 +100,7 @@
 </div>
 <script type="text/javascript">
     function cancelForm() {
-        window.location = "[[@{/users}]]";
+        window.location = "[[@{/naturalpersons}]]";
     }
 </script>
 </body>

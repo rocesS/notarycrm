@@ -1,16 +1,21 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
-  <title>Manage Natural Persons</title>
+  <title>Natural Persons Management</title>
   <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}"/>
 </head>
 <body>
 <div class="container-fluid text-center">
-  <div><h2>Manage Natural Persons</h2></div>
+  <div><h2>Manage Natural Persons database</h2></div>
   <div class="m-2">
-    <a class="h3" th:href="@{/naturalperson/new}">Add New Natural Person</a>
+    <a class="h3" th:href="@{/naturalpersons/new}">Add new Natural Person</a>
   </div>
+  <div th:if="${message}" class="alert alert-success text-center">
+    [[${message}]]
+  </div>
+
+  <div>
   <table class="table table-bordered">
     <thead class="table-dark">
     <th>ID</th>
