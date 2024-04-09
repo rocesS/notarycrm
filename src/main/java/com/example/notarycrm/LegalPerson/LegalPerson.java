@@ -7,26 +7,25 @@ import jakarta.persistence.*;
 public class LegalPerson {
 
     @Id
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column (nullable = false, length = 45, name = "name")
+    @Column(nullable = false, length = 45, name = "name")
     private String name;
 
-    @Column (nullable = false, length = 45, name = "email")
+    @Column(nullable = false, length = 45, name = "email")
     private String email;
 
-    @Column (nullable = false, length = 45, name = "phone_number")
+    @Column(nullable = false, length = 45, name = "phone_number")
     private String phoneNumber;
 
-    @Column (nullable = false, length = 45, name = "adress")
+    @Column(nullable = false, length = 45, name = "address")
     private String address;
 
-    @Column (unique = true, nullable = false, length = 45, name = "krs")
+    @Column(unique = true, nullable = false, length = 45, name = "krs")
     private int krsNumber;
 
     private boolean enabled;
-
 
     public Integer getId() {
         return id;
@@ -91,8 +90,4 @@ public class LegalPerson {
     public boolean isEnabled() {
         return enabled;
     }
-
-
-
-
 }

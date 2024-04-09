@@ -25,7 +25,7 @@ public class NaturalPersonController {
 
     @GetMapping("/naturalpersons/new")
     public String showNewForm(Model model) {
-        model.addAttribute("naturalperson", new NaturalPerson());
+        model.addAttribute("naturalPerson", new NaturalPerson());
         model.addAttribute("pageTitle", "Add new Natural Person");
         return "naturalperson_form";
     }
