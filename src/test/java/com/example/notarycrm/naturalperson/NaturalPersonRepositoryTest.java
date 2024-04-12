@@ -1,4 +1,4 @@
-package com.example.notarycrm;
+package com.example.notarycrm.naturalperson;
 
 import com.example.notarycrm.LegalPerson.LegalPerson;
 import com.example.notarycrm.NaturalPerson.NaturalPerson;
@@ -74,8 +74,8 @@ public class NaturalPersonRepositoryTest {
 
     @Test
     public void testDelete() {
-        Integer naturalPersonId = 2;
-        repo.deleteById(2);
+        Integer naturalPersonId = 1;
+        repo.deleteById(1);
 
         Optional<NaturalPerson> optionalNaturalPerson = repo.findById(2);
         Assertions.assertThat(optionalNaturalPerson).isNotPresent();
