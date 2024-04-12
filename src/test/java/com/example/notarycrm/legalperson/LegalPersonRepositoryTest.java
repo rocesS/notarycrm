@@ -1,4 +1,4 @@
-package com.example.notarycrm;
+package com.example.notarycrm.legalperson;
 
 import com.example.notarycrm.LegalPerson.LegalPerson;
 import com.example.notarycrm.LegalPerson.LegalPersonRepository;
@@ -25,7 +25,7 @@ public class LegalPersonRepositoryTest {
         legalPerson.setEmail("email.napisz@domnie.pl");
         legalPerson.setAddress("Ul. Kocia 1, Wojnów 51-045");
         legalPerson.setName("WKS Sp z o.o.");
-        legalPerson.setKrsNumber(523623564);
+        legalPerson.setKrsNumber("523623564");
         legalPerson.setPhoneNumber("+48748523452");
 
 

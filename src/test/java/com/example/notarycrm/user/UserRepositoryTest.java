@@ -1,4 +1,4 @@
-package com.example.notarycrm;
+package com.example.notarycrm.user;
 
 import com.example.notarycrm.User.User;
 import com.example.notarycrm.User.UserRepository;

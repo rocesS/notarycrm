@@ -10,7 +10,7 @@ public class LegalPerson {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(nullable = false, length = 45, name = "name")
+    @Column(nullable = false, length = 75, name = "name")
     private String name;
 
     @Column(nullable = false, length = 45, name = "email")
@@ -23,7 +23,7 @@ public class LegalPerson {
     private String address;
 
     @Column(unique = true, nullable = false, length = 45, name = "krs")
-    private int krsNumber;
+    private String krsNumber;
 
     private boolean enabled;
 
@@ -67,11 +67,11 @@ public class LegalPerson {
         this.address = address;
     }
 
-    public int getKrsNumber() {
+    public String getKrsNumber() {
         return krsNumber;
     }
 
-    public void setKrsNumber(int krsNumber) {
+    public void setKrsNumber(String krsNumber) {
         this.krsNumber = krsNumber;
     }
 
@@ -89,5 +89,10 @@ public class LegalPerson {
 
     public boolean isEnabled() {
         return enabled;
+    }
+
+
+    public void setEnabled(boolean enabled) {
+        this.enabled = enabled;
     }
 }
