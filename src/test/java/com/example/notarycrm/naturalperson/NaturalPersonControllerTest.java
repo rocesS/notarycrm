@@ -48,7 +48,7 @@ public class NaturalPersonControllerTest {
         List<NaturalPerson> naturalPersonList = Arrays.asList(new NaturalPerson(), new NaturalPerson());
         when(naturalPersonService.naturalPersonList()).thenReturn(naturalPersonList);
 
-        mockMvc.perform(get("/naturalpersons"))
+        mockMvc.perform(get("/naturalpersons/"))
                 .andExpect(status().isOk()) //status 200 dla zapytania get
                 .andExpect(view().name("naturalpersons"))
                 .andExpect(model().attribute("naturalPersonsList", naturalPersonList));
@@ -112,18 +112,20 @@ public class NaturalPersonControllerTest {
         mockMvc = MockMvcBuilders.standaloneSetup(naturalPersonController).build();
     }
 
+    @Test
+    public void testDeleteNaturalPerson() throws NaturalPersonNotFoundException {
+        Integer naturalPersonId = 1;
+        NaturalPerson naturalPerson = new NaturalPerson();
+        naturalPerson.setFirstName("Marek");
+        naturalPerson.setLastName("Budda");
 
-//    @Test
-//    public void testDeleteNaturalPerson() throws NaturalPersonNotFoundException {
-//        Integer naturalPersonId = 1;
-//        RedirectAttributes ra = mock(RedirectAttributes.class);
-//        String viewName = naturalPersonController.deleteUser(naturalPersonId, ra);
-//
-//        assertEquals("redirect:/narturalpersons", viewName);
-//
-//        verify(naturalPersonService, times(1)).delete(naturalPersonId);
-//
-//        verify(ra, times(1)).addFlashAttribute("message", naturalPerson);
-//    }
+        //symulacja serwisu
+        when(naturalPersonService.get(naturalPersonId)).thenReturn(naturalPerson);
+        RedirectAttributes ra = mock(RedirectAttributes.class);
+        String viewName = naturalPersonController.deleteNaturalPerson(naturalPersonId, ra);
+        assertEquals("redirect:/naturalpersons", viewName);
+        verify(naturalPersonService, times(1)).delete(naturalPersonId);
+        verify(ra, times(1)).addFlashAttribute("message", "Marek Budda has been deleted");
+    }
 
 }
