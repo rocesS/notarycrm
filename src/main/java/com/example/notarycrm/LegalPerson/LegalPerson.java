@@ -1,6 +1,7 @@
 package com.example.notarycrm.LegalPerson;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Pattern;
 
 @Entity
 @Table(name = "legal_persons")
@@ -23,6 +24,8 @@ public class LegalPerson {
     private String address;
 
     @Column(unique = true, nullable = false, length = 45, name = "krs")
+    @Pattern(regexp = "\\d{10}", message = "KRS number must consist of 10 digits")
+
     private String krsNumber;
 
     private boolean enabled;
