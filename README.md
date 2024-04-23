@@ -31,6 +31,7 @@ _Used technologies:_
 - Hibernate
 - Maven
 - HTML5
+- IntelliJ IDEA
 
 ## Tests
 
