@@ -10,9 +10,17 @@ import org.springframework.web.client.RestTemplate;
 @Service
 public class KrsValidatorService {
 
-    private final String API_URL = "https://api-krs.ms.gov.pl/api/krs/OdpisAktualny/{krs}?rejestr=P&format=json";
+    private static final String API_URL = "https://api-krs.ms.gov.pl/api/krs/OdpisAktualny/{krs}?rejestr=P&format=json";
+    private final RestTemplate restTemplate;
 
-    public boolean validateKrsNumber(String krsNumber) {
+
+    public KrsValidatorService(RestTemplate restTemplate) {
+        this.restTemplate = restTemplate;
+    }
+
+
+
+    public boolean validateKrsNumber(String krsNumber) throws KrsValidationException {
         //obiekt do komunikacji z zew API https://prs.ms.gov.pl/krs/openApi
         RestTemplate restTemplate = new RestTemplate();
         //podmiana krs od użytkownika do zapytania
@@ -25,12 +33,16 @@ public class KrsValidatorService {
             if(statusCode == HttpStatus.OK)
                 return true;
             else {
-                System.err.println("Checking KRS number failed. Status: " + statusCode);
+                throw new KrsValidationException ("Checking KRS number failed. Status: " + statusCode);
             }
         } catch (RestClientException e) {
-            System.err.println("Error during connection with KRS service" + e.getMessage());
-            return false;
+            throw new KrsValidationException("Error during connection with KRS service" + e.getMessage());
         }
-        return false;
     }
+
+
+
+
+
+
 }
