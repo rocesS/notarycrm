@@ -9,6 +9,8 @@
 <body>
 <div class="container-fluid">
     <div class="text-center"><h2>[[${pageTitle}]]</h2></div>
+    <div th:if="${errorMessage}" class="alert alert-danger text-center" th:text="${errorMessage}"></div>
+
 
     <form th:action="@{/legalpersons/save}" method="post" th:object="${legalperson}"
           style="max-width: 500px; margin: 0 auto;">
