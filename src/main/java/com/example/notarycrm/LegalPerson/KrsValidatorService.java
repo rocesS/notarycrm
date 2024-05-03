@@ -1,5 +1,6 @@
 package com.example.notarycrm.LegalPerson;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode; // Import the HttpStatusCode if it's the expected type
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -25,11 +26,13 @@ public class KrsValidatorService {
 
             if(statusCode.is2xxSuccessful()) { // dla odpowiedzi z grupy 200
                 return true;
+            } else if (response.getStatusCode() == HttpStatus.NOT_FOUND) {
+                throw new KrsValidationException("Provided KRS number does not exist.");
             } else {
                 throw new KrsValidationException("Checking KRS number failed. Status: " + statusCode);
             }
         } catch (RestClientException e) {
-            throw new KrsValidationException("Error during connection with KRS service: " + e.getMessage());
+            throw new KrsValidationException("KRS number is not valid. Check KRS number and try again.");
         }
     }
 }
