@@ -3,6 +3,7 @@ package com.example.notarycrm.LegalPerson;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -31,10 +32,16 @@ public class LegalPersonController {
     }
 
     @PostMapping("/legalpersons/save")
-    public String saveLegalPerson(LegalPerson legalPerson, RedirectAttributes ra) {
-        service.save(legalPerson);
-        ra.addFlashAttribute("message","Legal Person has been saved successfully");
-        return "redirect:/legalpersons";
+    public String saveLegalPerson(LegalPerson legalPerson, RedirectAttributes ra, Model model) {
+        try {
+            service.save(legalPerson);
+            ra.addFlashAttribute("message", "Legal Person saved successfully");
+            return "redirect:/legalpersons"; //przekierowanie po zapisaniu
+        } catch (KrsValidationException | DuplicateKrsException e) {        //zapis multi-catch dla dwoch wyjatkow
+            model.addAttribute("errorMessage", "Error: " + e.getMessage());
+            model.addAttribute("legalperson", legalPerson);
+            return "legalperson_form";
+        }
     }
 
     @GetMapping("/legalpersons/edit/{id}")
@@ -61,5 +68,7 @@ public class LegalPersonController {
         }
         return "redirect:/legalpersons";
     }
+
+
 
 }
