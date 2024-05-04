@@ -9,7 +9,6 @@ If you are notary office owner this application let you easy manage two the most
 2. Natural Person
 
 
-
 ## Features
 
 - In application you can ✨Add✨ ✨Edit✨ ✨List✨ and ✨Delete✨ user in your database 
