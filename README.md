@@ -9,7 +9,7 @@ If you are notary office owner this application let you easy manage two the most
 2. Natural Person
 
 
-## Features
+## Features. 
 
 - In application you can ✨Add✨ ✨Edit✨ ✨List✨ and ✨Delete✨ user in your database 
 - Application is able to veryfi KRS Number for leagl persons group customers in external data base(Krajowy Rejestr Sądowniczy) before adding to database - _in progress_
