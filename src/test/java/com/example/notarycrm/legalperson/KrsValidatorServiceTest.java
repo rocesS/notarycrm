@@ -1,7 +1,5 @@
 package com.example.notarycrm.legalperson;
 
-import com.example.notarycrm.LegalPerson.KrsValidationException;
-import com.example.notarycrm.LegalPerson.KrsValidatorService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -37,7 +35,7 @@ public class KrsValidatorServiceTest {
     }
 
     @Test
-    public void validateKrsNumber_Failure() throws KrsValidationException {
+    public void validateKrsNumber_Failure() {
         String krsNumber = "1234567890";
         ResponseEntity<String> mockedResponse = new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         when(restTemplate.getForEntity(anyString(), eq(String.class))).thenReturn(mockedResponse);
@@ -46,7 +44,7 @@ public class KrsValidatorServiceTest {
     }
 
     @Test
-    public void validateKrsNumber_ErrorInRestClient() throws KrsValidationException {
+    public void validateKrsNumber_ErrorInRestClient() {
         String krsNumber = "1234567890";
         when(restTemplate.getForEntity(anyString(), eq(String.class))).thenThrow(new RestClientException("Connection failed"));
 

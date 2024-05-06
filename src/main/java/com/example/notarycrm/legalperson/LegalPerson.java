@@ -1,4 +1,4 @@
-package com.example.notarycrm.LegalPerson;
+package com.example.notarycrm.legalperson;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Pattern;
@@ -92,7 +92,6 @@ public class LegalPerson {
     public boolean isEnabled() {
         return enabled;
     }
-
 
     public void setEnabled(boolean enabled) {
         this.enabled = enabled;

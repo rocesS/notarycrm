@@ -1,4 +1,4 @@
-package com.example.notarycrm.LegalPerson;
+package com.example.notarycrm.legalperson;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode; // Import the HttpStatusCode if it's the expected type

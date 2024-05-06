@@ -1,4 +1,4 @@
-package com.example.notarycrm.LegalPerson;
+package com.example.notarycrm.legalperson;
 
 public class LegalPersonNotFoundException extends Throwable{
     public LegalPersonNotFoundException(String message) {

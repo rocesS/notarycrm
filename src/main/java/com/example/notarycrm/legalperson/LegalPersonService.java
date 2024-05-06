@@ -1,4 +1,4 @@
-package com.example.notarycrm.LegalPerson;
+package com.example.notarycrm.legalperson;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

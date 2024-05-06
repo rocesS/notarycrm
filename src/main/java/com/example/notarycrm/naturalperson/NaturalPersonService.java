@@ -1,6 +1,5 @@
-package com.example.notarycrm.NaturalPerson;
+package com.example.notarycrm.naturalperson;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -9,8 +8,11 @@ import java.util.Optional;
 @Service
 public class NaturalPersonService {
 
-    @Autowired
-    private NaturalPersonRepository repo;
+    private final NaturalPersonRepository repo;
+
+    public NaturalPersonService(NaturalPersonRepository repo) {
+        this.repo = repo;
+    }
 
     public List<NaturalPerson> naturalPersonList() {
         return (List<NaturalPerson>) repo.findAll();

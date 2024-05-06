@@ -1,8 +1,5 @@
 package com.example.notarycrm.legalperson;
 
-import com.example.notarycrm.LegalPerson.LegalPerson;
-import com.example.notarycrm.LegalPerson.LegalPersonRepository;
-import org.apache.catalina.User;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,11 +46,13 @@ public class LegalPersonRepositoryTest {
     public void testUpdate() {
         Integer legalPersonId = 1;
         Optional<LegalPerson> optionalLegalPerson = repo.findById(legalPersonId);
-        LegalPerson legalPerson = optionalLegalPerson.get();
+        Assertions.assertThat(optionalLegalPerson).isPresent();
+        LegalPerson legalPerson = optionalLegalPerson.orElseThrow(() -> new RuntimeException("Legal Person not found"));
         legalPerson.setEmail("marian@buziak.pl");
         repo.save(legalPerson);
 
-        LegalPerson updateLegalPerson = repo.findById(legalPersonId).get();
+        LegalPerson updateLegalPerson = repo.findById(legalPersonId)
+                        .orElseThrow(() -> new RuntimeException("Legal Person not found"));
         Assertions.assertThat(updateLegalPerson.getEmail()).isEqualTo("marian@buziak.pl");
     }
 

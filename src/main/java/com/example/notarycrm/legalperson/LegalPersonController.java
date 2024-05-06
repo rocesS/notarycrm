@@ -1,9 +1,7 @@
-package com.example.notarycrm.LegalPerson;
+package com.example.notarycrm.legalperson;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,8 +12,11 @@ import java.util.List;
 @Controller
 public class LegalPersonController {
 
-    @Autowired
-    private LegalPersonService service;
+    private final LegalPersonService service; //zamiast @Autowired - dobra praktyka
+
+    public LegalPersonController(LegalPersonService service) {
+        this.service = service;
+    }
 
     @GetMapping("/legalpersons")
     public String showLegalPersonList(Model model) {
