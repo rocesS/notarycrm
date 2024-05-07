@@ -1,5 +1,6 @@
-package com.example.notarycrm.legalperson;
+package com.example.notarycrm.service;
 
+import com.example.notarycrm.service.exceptions.KrsValidationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode; // Import the HttpStatusCode if it's the expected type
 import org.springframework.http.ResponseEntity;

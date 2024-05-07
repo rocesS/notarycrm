@@ -1,5 +1,8 @@
-package com.example.notarycrm.user;
+package com.example.notarycrm.service;
 
+import com.example.notarycrm.model.User;
+import com.example.notarycrm.service.exceptions.UserNotFoundException;
+import com.example.notarycrm.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.example.notarycrm.legalperson;
+package com.example.notarycrm.service.exceptions;
 
 public class KrsValidationException extends Throwable {
     public KrsValidationException(String message) {

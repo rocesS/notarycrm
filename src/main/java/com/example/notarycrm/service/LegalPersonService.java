@@ -1,5 +1,10 @@
-package com.example.notarycrm.legalperson;
+package com.example.notarycrm.service;
 
+import com.example.notarycrm.model.LegalPerson;
+import com.example.notarycrm.repository.LegalPersonRepository;
+import com.example.notarycrm.service.exceptions.DuplicateKrsException;
+import com.example.notarycrm.service.exceptions.KrsValidationException;
+import com.example.notarycrm.service.exceptions.LegalPersonNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.annotation.Validated;

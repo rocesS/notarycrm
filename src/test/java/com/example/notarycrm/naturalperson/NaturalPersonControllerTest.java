@@ -1,5 +1,9 @@
 package com.example.notarycrm.naturalperson;
 
+import com.example.notarycrm.controller.NaturalPersonController;
+import com.example.notarycrm.model.NaturalPerson;
+import com.example.notarycrm.service.NaturalPersonService;
+import com.example.notarycrm.service.exceptions.NaturalPersonNotFoundException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

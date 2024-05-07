@@ -1,4 +1,4 @@
-package com.example.notarycrm.legalperson;
+package com.example.notarycrm.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Pattern;

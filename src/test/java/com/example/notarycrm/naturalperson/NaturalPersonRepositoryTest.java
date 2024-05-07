@@ -1,5 +1,7 @@
 package com.example.notarycrm.naturalperson;
 
+import com.example.notarycrm.model.NaturalPerson;
+import com.example.notarycrm.repository.NaturalPersonRepository;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

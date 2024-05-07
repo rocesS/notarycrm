@@ -1,4 +1,4 @@
-package com.example.notarycrm.user;
+package com.example.notarycrm.model;
 
 import jakarta.persistence.*;
 

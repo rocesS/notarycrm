@@ -1,5 +1,10 @@
-package com.example.notarycrm.legalperson;
+package com.example.notarycrm.controller;
 
+import com.example.notarycrm.model.LegalPerson;
+import com.example.notarycrm.service.LegalPersonService;
+import com.example.notarycrm.service.exceptions.DuplicateKrsException;
+import com.example.notarycrm.service.exceptions.KrsValidationException;
+import com.example.notarycrm.service.exceptions.LegalPersonNotFoundException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;

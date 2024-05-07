@@ -1,5 +1,8 @@
-package com.example.notarycrm.naturalperson;
+package com.example.notarycrm.service;
 
+import com.example.notarycrm.model.NaturalPerson;
+import com.example.notarycrm.service.exceptions.NaturalPersonNotFoundException;
+import com.example.notarycrm.repository.NaturalPersonRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

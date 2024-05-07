@@ -1,5 +1,10 @@
 package com.example.notarycrm.legalperson;
 
+import com.example.notarycrm.controller.LegalPersonController;
+import com.example.notarycrm.model.LegalPerson;
+import com.example.notarycrm.service.LegalPersonService;
+import com.example.notarycrm.service.exceptions.KrsValidationException;
+import com.example.notarycrm.service.exceptions.LegalPersonNotFoundException;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;

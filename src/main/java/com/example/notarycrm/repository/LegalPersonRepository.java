@@ -1,5 +1,6 @@
-package com.example.notarycrm.legalperson;
+package com.example.notarycrm.repository;
 
+import com.example.notarycrm.model.LegalPerson;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.Optional;

@@ -1,5 +1,8 @@
-package com.example.notarycrm.naturalperson;
+package com.example.notarycrm.controller;
 
+import com.example.notarycrm.model.NaturalPerson;
+import com.example.notarycrm.service.exceptions.NaturalPersonNotFoundException;
+import com.example.notarycrm.service.NaturalPersonService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;

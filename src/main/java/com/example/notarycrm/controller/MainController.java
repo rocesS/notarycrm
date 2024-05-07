@@ -1,4 +1,4 @@
-package com.example.notarycrm;
+package com.example.notarycrm.controller;
 
 
 import org.springframework.context.annotation.Bean;
