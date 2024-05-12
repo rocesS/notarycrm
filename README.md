@@ -4,8 +4,10 @@
 
 ## _Easy way to manage customer in notary office_
 
+General
 
-If you are notary office owner this application let you easy manage two the most popular types of your clients in this industry:
+"The Notary CRM application is a self-made project and serves as a portfolio project to represent and showcase the author's knowledge of the Java programming language and associated technologies in developing microservices.
+It's helpful for notary office owners, allowing them to easily manage the two most common types of clients in this industry:
 1. Legal Person
 2. Natural Person
 
