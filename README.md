@@ -10,13 +10,9 @@ It's helpful for notary office owners, allowing them to easily manage the two mo
 
 ## Features. 
 
-- In application you can :
-  •	Add
-  •	Edit
-  •	List
-  •	Delete
-- Application is able to veryfi KRS Number for leagl persons group customers in external data base(Krajowy Rejestr Sądowniczy) before adding to database
-- PowerUser can give privileges to single office co-worker
+- Application is able to veryfi KRS Number in external data base(Krajowy Rejestr Sądowniczy https://prs.ms.gov.pl/krs/openApi) before adding to database
+- RESTfull operation implemented: HTTP GET, HTTP POST, HTTP PUT, HTTP DELETE
+- PowerUser can give privileges to single office co-worker -in progress
 
 ## Tech
 
@@ -47,10 +43,15 @@ User view:
 
 ![first view](https://github.com/rocesS/notarycrm/assets/73910003/9c6321a9-31f6-4f41-a6f8-11c76801ca39)
 
+Legal Person saving view:
+![Zrzut ekranu 2024-05-6 o 15 30 42](https://github.com/rocesS/notarycrm/assets/73910003/15e1ef2c-fb9f-4384-8d10-7522ee77d869)
+
 Legal Person administrator view:
 
 ![Legal Persons](https://github.com/rocesS/notarycrm/assets/73910003/7f317fd9-617e-4e72-8609-9b9279249a86)
 
+Legal Person Validation view:
+![Zrzut ekranu 2024-05-6 o 15 17 11](https://github.com/rocesS/notarycrm/assets/73910003/4f4eba0c-573b-4d2d-9d6a-b96c839363f0)
 
 Natural Person administrator view:
 
