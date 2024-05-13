@@ -1,5 +1,3 @@
-## _Easy way to manage customer in notary office_
-
 ## General
 
 "The Notary CRM application is a self-made project and serves as a portfolio project to represent and showcase the author's knowledge of the Java programming language and associated technologies in developing microservices.
